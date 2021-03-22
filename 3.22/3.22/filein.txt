@@ -1,0 +1,13 @@
+return;
+if((IN=fopen("In.txt","r"))==NULL)
+#include <stdio.h>
+void main()
+{
+	FILE* In;
+	if((IN=fopen("In.txt","r"))==NULL)
+	{
+		printf("Can&rsquo;t open in. txt!");
+		return;
+	}
+	fclose(IN);
+}
