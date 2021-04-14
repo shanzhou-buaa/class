@@ -1,0 +1,32 @@
+1
+#include()<stdio.h>
+int main(){
+printf("{ hello world }\n");//}
+)
+
+2
+#include<stdio.h>
+int main(){
+printf("{ hello world }d\n"); /* }*/
+
+3
+#include<stdio.h>
+int main(){
+printf("{ hello world }d\n"); /* }*/
+}
+
+4
+(()//(
+){/*}
+}*/}
+
+5
+#include <stdio.h>
+int main()
+{
+int a[];
+/*a
+b
+c*/
+}
+
