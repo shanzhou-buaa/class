@@ -1,0 +1,15 @@
+﻿生成启动时间为 2021/5/1 12:52:56。
+     1>项目“D:\2021code\5.6LeetCode\5.6LeetCode\5.6LeetCode.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt test.c
+         test.c
+     1>d:\2021code\5.6leetcode\5.6leetcode\test.c(40): error C2275: “tn”: 将此类型用作表达式非法
+                 d:\2021code\5.6leetcode\5.6leetcode\test.c(16) : 参见“tn”的声明
+     1>d:\2021code\5.6leetcode\5.6leetcode\test.c(40): error C2065: “temp”: 未声明的标识符
+     1>d:\2021code\5.6leetcode\5.6leetcode\test.c(42): error C2065: “temp”: 未声明的标识符
+     1>d:\2021code\5.6leetcode\5.6leetcode\test.c(42): warning C4047: “=”:“TreeNode *”与“int”的间接级别不同
+     1>已完成生成项目“D:\2021code\5.6LeetCode\5.6LeetCode\5.6LeetCode.vcxproj”(Build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:00.15
