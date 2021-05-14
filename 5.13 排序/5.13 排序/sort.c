@@ -180,6 +180,113 @@ void QuickSort(int* a, int left, int right)
 	QuickSort(a, mid + 1, right);
 }
 
+#include "stack.h"
+void QuickSortNonR(int* a, int begin, int end)
+{
+	stack st;
+	StackInit(&st);
+	StackPush(&st, begin);
+	StackPush(&st, end);
+
+	while (!StackEmpty(&st))
+	{
+		int right = StackTop(&st);
+		StackPop(&st);
+		int left = StackTop(&st);
+		StackPop(&st);
+
+		int keyi = PartSort1(a, left, right);
+		if (left < keyi - 1)
+		{
+			StackPush(&st, left);
+			StackPush(&st, keyi - 1);
+		}
+
+		if (right > keyi + 1)
+		{
+			StackPush(&st, keyi + 1);
+			StackPush(&st, right);
+		}
+	}
+	StackDestroy(&st);
+}
+
+void _Merge(int* a, int begin1, int end1, int begin2, int end2, int* tmp)
+{
+	int begin = begin1;
+	int i = begin1;
+
+	//在两段区间中找小的值尾插
+	while (begin1 <= end1 && begin2 <= end2)
+	{
+		if (a[begin1] < a[begin2])
+			tmp[i++] = a[begin1++];
+		else
+			tmp[i++] = a[begin2++];
+	}
+
+	//把剩余的数据拷贝到tmp中，下面两个循环只走一个
+	while (begin1 <= end1)
+		tmp[i++] = a[begin1++];
+	while (begin2 <= end2)
+		tmp[i++] = a[begin2++];
+
+	//归并结束，把tmp中对应位置的数据全部拷贝回去
+	for (i = begin; i <= end2; i++)
+		a[i] = tmp[i];
+}
+
+void _MergeSort(int* a, int left, int right, int* tmp)
+{
+	if (left >= right)
+		return;
+
+	//递归使左右两段区间有序
+	int mid = (left + right) >> 1;
+	_MergeSort(a, left, mid, tmp);
+	_MergeSort(a, mid + 1, right, tmp);
+
+	//左右两段区间已经有序，排序使整个区间有序
+	_Merge(a, left, mid, mid + 1, right, tmp);
+}
+
+void MergeSort(int* a, int n)
+{
+	int* tmp = (int*)malloc(sizeof(int)* n);
+	if (tmp == NULL)
+	{
+		printf("malloc fail\n");
+		exit(-1);
+	}
+	_MergeSort(a, 0, n - 1, tmp);
+
+	free(tmp);
+}
+
+void MergeSortNonR(int* a, int n)
+{
+	int* tmp = (int*)malloc(sizeof(int)* n);
+	int i = 0, gap = 1;
+	while (gap < n)
+	{
+		for (i = 0; i < n; i += 2 * gap)
+		{
+			int begin1 = i, end1 = i + gap - 1;
+			int begin2 = i + gap, end2 = i + 2 * gap - 1;
+			
+			//第二个小组超出数组范围，说明数组中只有第一个小组，而第一个小组已经是排好序的，直接退出
+			if (begin2 >= n)
+				break;
+			
+			//第二个小组末尾超出数组范围，修正它的末尾保证不越界
+			if (end2 >= n)
+				end2 = n - 1;
+			_Merge(a, begin1, end1, begin2, end2, tmp);
+		}
+		gap *= 2;
+	}
+}
+
 void PrintArray(int* a, int n)
 {
 	int i = 0;
