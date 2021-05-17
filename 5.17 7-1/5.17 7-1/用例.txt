@@ -1,0 +1,12 @@
+wins 1
+wins 2
+wins 3
+wins 4
+yes 1
+yes 2
+yes 3
+yes 4
+you 1
+you 2
+you 3
+you 4
