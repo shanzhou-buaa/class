@@ -1,0 +1,13 @@
+﻿生成启动时间为 2021/6/1 21:35:02。
+     1>项目“D:\2021code\6.4 类和对象\6.4 类和对象\6.4 类和对象.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt test.cpp
+         test.cpp
+     1>d:\2021code\6.4 类和对象\6.4 类和对象\test.cpp(195): error C2248: “A::_n”: 无法访问 private 成员(在“A”类中声明)
+                 d:\2021code\6.4 类和对象\6.4 类和对象\test.cpp(181) : 参见“A::_n”的声明
+                 d:\2021code\6.4 类和对象\6.4 类和对象\test.cpp(163) : 参见“A”的声明
+     1>已完成生成项目“D:\2021code\6.4 类和对象\6.4 类和对象\6.4 类和对象.vcxproj”(Build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:00.37
