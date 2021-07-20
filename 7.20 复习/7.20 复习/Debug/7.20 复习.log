@@ -1,0 +1,14 @@
+﻿生成启动时间为 2021/7/9 18:06:17。
+     1>项目“D:\2021code\7.20 复习\7.20 复习\7.20 复习.vcxproj”在节点 2 上(Rebuild 个目标)。
+     1>ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt test.cpp
+         test.cpp
+     1>d:\2021code\7.20 复习\7.20 复习\test.cpp(97): error C2833: “operator private”不是可识别的运算符或类型
+     1>d:\2021code\7.20 复习\7.20 复习\test.cpp(97): error C2059: 语法错误:“newline”
+     1>d:\2021code\7.20 复习\7.20 复习\test.cpp(97): error C2334: “:”的前面有意外标记；跳过明显的函数体
+     1>d:\2021code\7.20 复习\7.20 复习\test.cpp(128): fatal error C1004: 发现意外的文件尾
+     1>已完成生成项目“D:\2021code\7.20 复习\7.20 复习\7.20 复习.vcxproj”(Rebuild 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:00.63
